@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      iframe {
+        border: solid 1px #aaa;
+        margin-left: 20px;
+      }
+
+      h2 {
+        margin-left: 20px;
+      }
+
+      iframe.hidden {
+        visibility: hidden;
+      }
+    </style>
+    <script>
+      function onIFrameLoad() {
+        // alert("About to show the iframe!");
+        var iframe = document.getElementById("ex_iframe");
+        if(iframe){
+          iframe.classList.remove("hidden");
+        }
+      }
+  </script>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <title>Zipwhip Embeddable Inbox Component</title>
+  </head>
+
+  <body>
+    <h2> Zipwhip Embeddable</h2>
+    <iframe
+      id="ex_iframe"
+      onload="onIFrameLoad()"
+      class="hidden"
+      src="https://embed.zipwhip.com/messaging/"
+      width="300px"
+      height="500px"
+    ></iframe>
+  </body>
+</html>
